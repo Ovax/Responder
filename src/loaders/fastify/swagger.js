@@ -10,7 +10,7 @@ export default {
         url: 'https://swagger.io',
         description: 'Find more info here'
       },
-      host: '<ip>:<port>',
+      host: 'localhost:' + process.env.PORT,
       schemes: ['http'],
       consumes: ['application/json'],
       produces: ['application/json'],

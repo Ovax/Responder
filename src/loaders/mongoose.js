@@ -1,9 +1,8 @@
 import mongoose from 'mongoose'
 
 const setDB = async _ => {
-  let DB = 'mongodb://<user>:<pass>@<ip>:<port>'
   mongoose.Promise = global.Promise;
-  await mongoose.connect(DB)
+  await mongoose.connect(process.env.DATABASE)
     .then(() => console.log('Db is conencted'))
     .catch(err => console.error(err))
 }

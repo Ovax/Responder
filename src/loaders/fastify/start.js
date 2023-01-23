@@ -1,5 +1,5 @@
 const fastifyStart = async fastify => {
-    fastify.listen({ port: 3000 }, err => {
+    fastify.listen({ port: process.env.PORT }, err => {
         if (err) {
           console.log(err)
           return
